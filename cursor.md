@@ -24,51 +24,6 @@
 1. This will open your `settings.json` file
 2. Add the `mcpServers` configuration to your settings.json:
 
-```json
-{
-  "mcp.servers": {
-    "brave-search": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-brave-search"
-      ],
-      "env": {
-        "BRAVE_API_KEY": "your_brave_api_key_here"
-      }
-    },
-    "tavily-mcp": {
-      "command": "tavily-mcp",
-      "env": {
-        "TAVILY_API_KEY": "your_tavily_api_key_here"
-      },
-      "disabled": false,
-      "autoApprove": []
-    },
-    "sequential-thinking": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-sequential-thinking"
-      ]
-    },
-    "mcp-server-fetch": {
-      "command": "uvx",
-      "args": [
-        "mcp-server-fetch"
-      ]
-    },
-    "context7": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@upstash/context7-mcp"
-      ]
-    }
-  }
-}
-```
-
 ### Step 4: Save and Restart
 1. Save the `settings.json` file (`Ctrl + S`)
 2. Restart Cursor for the changes to take effect
