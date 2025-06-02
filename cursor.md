@@ -45,7 +45,11 @@
       }
     },
     "tavily-mcp": {
-      "command": "tavily-mcp",
+      "command": "npx",
+      "args": [
+        "-y",
+        "tavily-mcp@0.2.1"
+      ]
       "env": {
         "TAVILY_API_KEY": ""
       },
