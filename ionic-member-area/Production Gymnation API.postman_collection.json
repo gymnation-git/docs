@@ -1,0 +1,1008 @@
+{
+	"info": {
+		"_postman_id": "4007b8ec-bf4d-4a44-93e4-12257fd75ff5",
+		"name": "Production Gymnation API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43747666",
+		"_collection_link": "https://test88-5921.postman.co/workspace/Gymnation-App~71ea0199-174d-47c9-8866-48dcb5e5037b/collection/42816892-4007b8ec-bf4d-4a44-93e4-12257fd75ff5?action=share&source=collection_link&creator=43747666"
+	},
+	"item": [
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "Get Single Member by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0NzcxODI5MywiZXhwIjoxNzQ3NzIxODkzfQ.RpIDCiQMcBxWc2MQLq4v5MVvYtVj7kveEKdS4PjKh6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{live_url}}/members/by-pg/301793",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"members",
+								"by-pg",
+								"301793"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Member by agreement Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0NzcxODUwMSwiZXhwIjoxNzQ3NzIyMTAxfQ.WXVDo2nrbSskfKjnbKVN2DB3kFCxfU0fpqB9uFHn9Yo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{live_url}}/members/582025",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"members",
+								"582025"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Member by Email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0ODQyMTY1NSwiZXhwIjoxNzQ4NDI1MjU1fQ.6jO8dQBAH748FO2QNJicTr6xfSq3SGYLTTsCpMR-_Vc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/members/by-email?email=test@gymnation.com",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"members",
+								"by-email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@gymnation.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Member",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0OTAyMzQ1OSwiZXhwIjoxNzQ5MDI3MDU5fQ.MPe_RqppVFexXoiB3VLiQbN_Hm9qww0dfSPcTKvsV3E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"birthdate\": \"1995-02-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/members/582025",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"members",
+								"582025"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plans",
+			"item": [
+				{
+					"name": "Get All Plans",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0Nzc0MjE3NiwiZXhwIjoxNzQ3NzQ1Nzc2fQ.5HRobLqVb7yVrkELMMkVCJeT5ecV-FfLzjyLQgKsjR0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{live_url}}/plans",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Plan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{live_url}}/plans/58",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"plans",
+								"58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Member Plans",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0Nzc0MjE3NiwiZXhwIjoxNzQ3NzQ1Nzc2fQ.5HRobLqVb7yVrkELMMkVCJeT5ecV-FfLzjyLQgKsjR0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{live_url}}/plans/member-plans?member_id=301793",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"plans",
+								"member-plans"
+							],
+							"query": [
+								{
+									"key": "member_id",
+									"value": "301793"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upgrade",
+			"item": [
+				{
+					"name": "calculate amount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0ODUxMDQxMywiZXhwIjoxNzQ4NTE0MDEzfQ.3YWZoh67qTPItdSW0loUcqC2UKSEkRnNdox_TrlqZuw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agreementId\" : 582025,\r\n    \"newPlanId\" : 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/upgrades/calculate-amount",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"upgrades",
+								"calculate-amount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "promo valid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0ODU5MjY3MSwiZXhwIjoxNzQ4NTk2MjcxfQ.AgP-bPUBKbEtIRsivy_NmiTGLmX-dY2PWoR2b79G2Q4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/upgrades/validate?code=PD97HE",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"upgrades",
+								"validate"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "PD97HE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upgrade membership",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0ODUxMDQxMywiZXhwIjoxNzQ4NTE0MDEzfQ.3YWZoh67qTPItdSW0loUcqC2UKSEkRnNdox_TrlqZuw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agreementId\" : 582025,\r\n    \"currentPlanId\" : 26,\r\n    \"newPlanId\" : 25,\r\n    \"promoCode\" : \"test\",\r\n    \"amount\" : 500,\r\n    \"amountAfterDiscount\" : 200,\r\n    \"payment_way\": \"quicklink\",\r\n    \"pre_amount\": 65\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/upgrades/apply",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"upgrades",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Freezing",
+			"item": [
+				{
+					"name": "Freeze Membership",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0NzcyNzQ5NywiZXhwIjoxNzQ3NzMxMDk3fQ.-YyqCgEQ1n_t-ZYRBCWICPGYUd-k-PkZCiAlJO7YdW8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agreementId\" : 582025,\r\n    \"payment_way\" : \"quicklink\",\r\n    \"freeze_fee\" : 1,\r\n    \"start_freeze\" : \"2025-05-20\",\r\n    \"end_freeze\" : \"2025-05-29\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/freezes/apply",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"freezes",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unfreeze Membership",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0NjUzODUzMCwiZXhwIjoxNzQ2NTQyMTMwfQ.81ghVZFFL2SqTT8EKUBB1p5CmJULKRG5poD2N8gbHUw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agreementId\" : 582025\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/freezes/disable",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"freezes",
+								"disable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Freeze Membership status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0Nzc0MjE3NiwiZXhwIjoxNzQ3NzQ1Nzc2fQ.5HRobLqVb7yVrkELMMkVCJeT5ecV-FfLzjyLQgKsjR0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{live_url}}/freezes/isFrozen/:agreementId",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"freezes",
+								"isFrozen",
+								":agreementId"
+							],
+							"variable": [
+								{
+									"key": "agreementId",
+									"value": "582025"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cancellation",
+			"item": [
+				{
+					"name": "Check Cancellation Membership status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0NzcyNzc1MywiZXhwIjoxNzQ3NzMxMzUzfQ.DikUeKOKKweY8zHrTR1taHsV6_OD76M0uIiem5pyAck",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{live_url}}/cancellations/isCancelled/:agreementId",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"cancellations",
+								"isCancelled",
+								":agreementId"
+							],
+							"variable": [
+								{
+									"key": "agreementId",
+									"value": "582025"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create cancellation request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0NzczNTcyNywiZXhwIjoxNzQ3NzM5MzI3fQ.9FUmnFrkyNJ2ZyDUBUCBhxzRUV9YPzPFZ_dLOIOIX7g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agreementId\" : 582025,\r\n    \"reason\" : \"test test test\",\r\n    \"reasonMsg\" : \"test Reason\",\r\n    \"lang\" : \"en\",\r\n    \"fileName\" : \"test.pdf\",\r\n    \"base64Content\" : \"data:application/pdf;base64,JVBERi0xLjYNJeLjz9MNCj…0cmVhbQ1lbmRvYmoNc3RhcnR4cmVmDTE1Nzk3OTgNJSVFT0YN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cancellations",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cancellations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment Overdue / Change Card",
+			"item": [
+				{
+					"name": "change card",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0Njc5MjA4MSwiZXhwIjoxNzQ2Nzk1NjgxfQ.zo1eb8lXd_A7Y2s8j65abMohxrxd8w9MEChH9eXJa5U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agreementId\": 582025,\r\n    \"amount\" : 1, // always\r\n    \"description\" : \"Update Payment Card\", // always\r\n    \"actionType\" : \"change_card\",  // always\r\n    \"telrWay\" : \"quicklink\" // always\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/payments/change-card",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"payments",
+								"change-card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pay Now",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0NzAzNDAxOSwiZXhwIjoxNzQ3MDM3NjE5fQ.t_TmcZOZwaPyc69qG5bQKXjzOW2cUeC66ExP0Disc6Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agreementId\": 582025,\r\n    \"amount\" : 99,\r\n    \"description\" : \"Settlement of defaulted payment\", \r\n    \"actionType\" : \"overdue\",\r\n    \"telrWay\" : \"direct\",\r\n    \"paymentId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/payments/pay",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"payments",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Payment status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0NzAzNDAxOSwiZXhwIjoxNzQ3MDM3NjE5fQ.t_TmcZOZwaPyc69qG5bQKXjzOW2cUeC66ExP0Disc6Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\" : \"unpaid\",\r\n    \"paymentId\" : 422\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/payments/update-status",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"payments",
+								"update-status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment History",
+			"item": [
+				{
+					"name": "member payments history",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0Nzc0MjE3NiwiZXhwIjoxNzQ3NzQ1Nzc2fQ.5HRobLqVb7yVrkELMMkVCJeT5ecV-FfLzjyLQgKsjR0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{live_url}}/payments/:agreementId/history",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"payments",
+								":agreementId",
+								"history"
+							],
+							"variable": [
+								{
+									"key": "agreementId",
+									"value": "582025"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "member payments history Record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0NzcyMjIzNywiZXhwIjoxNzQ3NzI1ODM3fQ.XFHYjn24LQsMYnavFQ_ljTTGAwbLb7P2uqxuPJibNUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{live_url}}/payments/history/:id",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"payments",
+								"history",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment Defaults",
+			"item": [
+				{
+					"name": "member payments defaults",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0Nzc0MjE3NiwiZXhwIjoxNzQ3NzQ1Nzc2fQ.5HRobLqVb7yVrkELMMkVCJeT5ecV-FfLzjyLQgKsjR0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{live_url}}/payments/:agreementId/defaults",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"payments",
+								":agreementId",
+								"defaults"
+							],
+							"variable": [
+								{
+									"key": "agreementId",
+									"value": "582025"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "member payments default Record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0NzcyMjIzNywiZXhwIjoxNzQ3NzI1ODM3fQ.XFHYjn24LQsMYnavFQ_ljTTGAwbLb7P2uqxuPJibNUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{live_url}}/payments/defaults/:id",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"payments",
+								"defaults",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Otp",
+			"item": [
+				{
+					"name": "Generate OTP",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0OTQ1NDU4MywiZXhwIjoxNzQ5NDU4MTgzfQ.jPqalTCcSJEWFjfAtqvk2O-6dgI5akUf4dkzgzYWWAs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n//   \"email\": \"anthony.tinio@gymnation.com\",\r\n//   \"phone\": \"0551998014\",\r\n//   \"phone\": \"0566283184\",\r\n  \"phone\": \"+639266535536\",\r\n  \"type\": \"sms\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/otp",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify OTP",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAxNzkzLCJlbWFpbCI6InRlc3RAZ3ltbmF0aW9uLmNvbSIsImFncmVlbWVudF9pZCI6IjU4MjAyNSIsImlhdCI6MTc0Njc5MjQ3MywiZXhwIjoxNzQ2Nzk2MDczfQ.sjoc-p-jgmmKPnyWSMlS-gVRgULRdyGnYI7ZJnKlJ2s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"otpReference\": \"301793\",\r\n  \"type\": \"both\",\r\n  \"otp\": \"460606\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/otp/verify",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"otp",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login complete (BASE_URL)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@gymnation.com\",\r\n  \"password\": \"Karl\",\r\n  \"firstName\" : \"Karl\",\r\n  \"lastName\" : \"Test\" // 40035690562 === ref\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/login-complete",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"login-complete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login complete (LIVE_URL)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@gymnation.com\",\r\n  \"password\": \"Karl\",\r\n  \"firstName\" : \"Karl\",\r\n  \"lastName\" : \"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live_url}}/auth/login-complete",
+					"host": [
+						"{{live_url}}"
+					],
+					"path": [
+						"auth",
+						"login-complete"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3005",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "stage_url",
+			"value": "https://guided-smiling-woodcock.ngrok-free.app",
+			"type": "string"
+		},
+		{
+			"key": "live_url",
+			"value": "https://gn-app-backend.ngrok.app",
+			"type": "string"
+		}
+	]
+}
